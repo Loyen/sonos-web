@@ -6,11 +6,10 @@ Vue.component('sonos-devices', {
 
 		</div>
 	`,
-	data() {
-		return { devices: [] };
-	},
-	mounted() {
-		this.devices = this.$root.devices;
+	computed: {
+		devices() {
+			return this.$root.devices;
+		}
 	},
 	methods: {
 		trackTrigger(data) {
