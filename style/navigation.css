@@ -1,0 +1,27 @@
+.navigation {
+	font-size: 1.2em;
+
+	background-color: #F44336;
+	color: #FFEBEE;
+}
+
+.navigation-item {
+	display: inline-block;
+
+	flex: 1;
+
+	line-height: 4em;
+
+	padding-left: 1em;
+	padding-right: 1em;
+
+	position: relative;
+
+	text-align: center;
+
+	cursor: pointer;
+}
+
+.navigation-item:hover {
+	background-color: #C62828;
+}

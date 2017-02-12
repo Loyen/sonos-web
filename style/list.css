@@ -1,0 +1,40 @@
+.list {
+}
+
+.listItem {
+	background-color: #FAFAFA;
+
+	border-bottom: 0.1em solid #E0E0E0;
+
+	transition-duration: 0.2s;
+	transition-delay: 0s;
+	transition-property: margin, background-color box-shadow;
+}
+.listItem.isActive {
+	border-bottom: 0;
+	margin: 1em 0;
+}
+
+.listItem-header,
+.listItem-body,
+.listItem-footer {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.listItem-header {
+	display: block;
+	font-size: 0.85em;
+	line-height: 3em;
+}
+
+.listItem-body {
+	padding-bottom: 0.2em;
+	padding-top: 0.2em;
+}
+
+.listItem-footer {
+	background-color: #EEEEEE;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+}

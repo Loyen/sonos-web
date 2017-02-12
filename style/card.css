@@ -1,0 +1,31 @@
+.card {
+	background-color: #FAFAFA;
+
+	margin: 1em 0;
+
+	border-radius: 0.15em;
+}
+
+.card-header,
+.card-body,
+.card-footer {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.card-header {
+	display: block;
+	font-size: 0.85em;
+	line-height: 3em;
+}
+
+.card-body {
+	padding-bottom: 0.2em;
+	padding-top: 0.2em;
+}
+
+.card-footer {
+	background-color: #EEEEEE;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+}

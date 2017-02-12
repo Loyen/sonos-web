@@ -1,0 +1,51 @@
+.tabs-bar {
+	position: relative;
+
+	background-color: #F44336;
+	color: #FFEBEE;
+}
+
+.tabs-bar .container {
+	display: flex;
+}
+
+.tabs-tab {
+	display: inline-block;
+
+	flex: 1;
+
+	font-size: 0.8em;
+	line-height: 2em;
+
+	padding-left: 1em;
+	padding-right: 1em;
+
+	position: relative;
+
+	text-align: center;
+
+	cursor: pointer;
+
+	transition-duration: 0.2s;
+	transition-delay: 0s;
+	transition-property: background-color, flex;
+}
+
+.tabs-tab:hover,
+.tabs-tab.isActive {
+	background-color: #C62828;
+}
+
+.tabs-content {
+	display: none;
+}
+
+.tabs-content.isActive {
+	display: block;
+}
+
+.icon--tab {
+	display: block;
+	font-size: 2.5em;
+	line-height: 1.5em;
+}

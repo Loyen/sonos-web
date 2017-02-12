@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="document">
+<head>
+	<title></title>
+
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" type="text/css" href="./style/index.css" />
+</head>
+<body class="body">
+
+<div class="app">
+
+	<sonos-player></sonos-player>
+
+	<sonos-tabs>
+		<sonos-tab name="Devices" :selected="true">
+
+			<sonos-devices></sonos-devices>
+
+		</sonos-tab>
+
+		<sonos-tab name="Queue">
+
+			<sonos-queue v-if="hasDevice"></sonos-queue>
+
+			<sonos-card name="No device" v-if="!hasDevice">
+				<div>You have not specified a device.</div>
+			</sonos-card>
+
+			<sonos-card name="No songs queued" v-if="hasDevice && emptyQueue">
+				<div>This device has no songs queued.</div>
+			</sonos-card>
+
+		</sonos-tab>
+
+	</sonos-tabs>
+
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<script src="./script/vue.sonos-button.js"></script>
+<script src="./script/vue.sonos-card.js"></script>
+<script src="./script/vue.sonos-devices.js"></script>
+<script src="./script/vue.sonos-icon.js"></script>
+<script src="./script/vue.sonos-player.js"></script>
+<script src="./script/vue.sonos-queue.js"></script>
+<script src="./script/vue.sonos-tabs.js"></script>
+<script src="./script/vue.sonos-track.js"></script>
+
+<script src="./script/vue.sonos.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+@import url('normalize.css');
+
+@import url('button.css');
+@import url('card.css');
+@import url('icon.css');
+@import url('list.css');
+@import url('navigation.css');
+@import url('player.css');
+@import url('raise.css');
+@import url('tabs.css');
+
+.body {
+	margin: 0;
+	background-color: #757575;
+	color: #000000;
+
+	font-family: 'Roboto Mono';
+	font-size: 100%;
+	line-height: 1.5em;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 240px;
+	max-width: 960px;
+	width: 100%;
+}
+
+p {
+	margin: 0;
+}

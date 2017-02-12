@@ -1,0 +1,75 @@
+.button {
+	display: inline-block;
+	line-height: 2em;
+	padding-left: 1em;
+	padding-right: 1em;
+	border-radius: 0.15em;
+
+	color: #2196F3;
+
+	cursor: pointer;
+
+	box-shadow: 0 0.1em 0.1em 0 rgba(0,0,0,0.25);
+
+	transition-duration: 0.2s;
+	transition-delay: 0s;
+	transition-property: background-color, box-shadow;
+}
+
+.button--flat {
+	box-shadow: none;
+}
+
+.button--flat:hover {
+	background-color: rgba(255,255,255,0.2);
+}
+
+.button:hover {
+	box-shadow: 0 0.25em 0.25em 0 rgba(0,0,0,0.25);
+}
+
+/* Primary */
+
+.button--primary {
+	color: #2196F3;
+}
+
+.button--primary.button--colored {
+	background-color: #2196F3;
+	color: #FFFFFF;
+}
+
+.button--primary.button--colored:hover {
+	background-color: #42A5F5;
+}
+
+/* Secondary */
+
+.button--secondary {
+	color: #F44336;
+}
+
+.button--secondary.button--colored {
+	background-color: #F44336;
+	color: #FFFFFF;
+}
+
+.button--secondary.button--colored:hover {
+	background-color: #EF5350;
+}
+
+/* Disabled */
+
+.button--disabled {
+	color: #9E9E9E;
+	cursor: default;
+}
+
+.button--disabled.button--colored {
+	background-color: #9E9E9E;
+	color: #FFFFFF;
+}
+
+.button--disabled:hover {
+	box-shadow: none;
+}

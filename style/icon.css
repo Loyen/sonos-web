@@ -1,0 +1,95 @@
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/MaterialIcons-Regular.eot'); /* For IE6-8 */
+	src: local('Material Icons'),
+		local('MaterialIcons-Regular'),
+		url('../font/MaterialIcons-Regular.woff2') format('woff2'),
+		url('../font/MaterialIcons-Regular.woff') format('woff'),
+		url('../font/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.icon {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+/*	font-size: 24px;  /* Preferred icon size */
+	display: inline-block;
+/*
+	width: 1em;
+	height: 1em;
+	line-height: 1;
+*/
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	vertical-align: bottom;
+
+	pointer-events: none;
+
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+
+.icon--devices:after {
+	content: 'speaker_group';
+}
+
+.icon--queue:after {
+	content: 'queue_music';
+}
+
+.icon--search:after {
+	content: 'search';
+}
+
+.icon--settings:after {
+	content: 'settings';
+}
+
+.icon--playTrack:after {
+	content: 'play_arrow';
+}
+
+.icon--pauseTrack:after {
+	content: 'pause';
+}
+
+.icon--stopTrack:after {
+	content: 'stop';
+}
+
+.icon--nextTrack:after {
+	content: 'skip_next';
+}
+
+.icon--previousTrack:after {
+	content: 'skip_previous';
+}
+
+.icon--repeatTrack:after {
+	content: 'repeat';
+}
+
+.icon--shuffleTrack:after {
+	content: 'shuffle';
+}
+
+.icon--thumbUp:after {
+	content: 'thumb_up';
+}
+
+.icon--thumbDown:after {
+	content: 'thumb_down';
+}

@@ -1,0 +1,40 @@
+.player {
+	background-color: #C62828;
+	color: #FFEBEE;
+}
+
+.player.isHidden {
+	display: none;
+}
+
+.player .container {
+	display: flex;
+}
+
+.playerItem {
+	flex: 1;
+
+	text-align: center;
+}
+
+.playerItem--primary {
+	flex: 2;
+	font-size: 4em;
+	line-height: 1em;
+}
+
+.playerItem--secondary {
+	flex: 1;
+	font-size: 2em;
+	line-height: 2em;
+	opacity: 0.5;
+}
+
+.playerItem--secondary.isActive {
+	opacity: 1;
+}
+
+.playerTrack {
+	flex: 1;
+	text-align: center;
+}
