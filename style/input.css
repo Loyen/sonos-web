@@ -1,0 +1,10 @@
+.input-text {
+	border: 0;
+	border-bottom: 0.1em solid #E0E0E0;
+	line-height: 1.5em;
+	resize: none;
+}
+
+.input--fill .input-text {
+	width: 100%;
+}

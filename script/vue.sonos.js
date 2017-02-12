@@ -156,12 +156,6 @@ app = new Vue({
 			var previous_trackid = null;
 			var trackIndex = Object.keys(this.tracks);
 
-			if (this.shuffle) {
-				previous_trackid = trackIndex[Math.floor(Math.random() * trackIndex.length)];
-
-				return previous_trackid;
-			}
-
 			for (var trackid of trackIndex) {
 				if (trackid == current_trackid) break;
 				previous_trackid = trackid;
@@ -173,14 +167,6 @@ app = new Vue({
 		next_trackid() {
 			var current_trackid = this.$root.current_trackid;
 			var next_trackid = null;
-
-			if (this.shuffle) {
-				var trackIndex = Object.keys(this.tracks);
-				next_trackid = trackIndex[Math.floor(Math.random() * trackIndex.length)];
-
-				return next_trackid;
-			}
-
 			var isNext = false;
 			var trackIndex = Object.keys(this.tracks);
 
@@ -203,6 +189,11 @@ app = new Vue({
 		}
 	},
 	methods: {
+		random_trackid() {
+			var trackIndex = Object.keys(this.tracks);
+			return trackIndex[Math.floor(Math.random() * trackIndex.length)];
+		},
+
 		playTrack(trackid) {
 			if (trackid != null && this.current_trackid != trackid) this.current_device.current_trackid = trackid;
 			if (!this.hasTrack) this.current_device.current_trackid = Object.keys(this.tracks)[0];
@@ -211,12 +202,16 @@ app = new Vue({
 			return true;
 		},
 
-		previousTrack() {
-			return this.playTrack(this.previous_trackid);
+		previousTrack(allowShuffle) {
+			if (typeof(allowShuffle) == "undefined") allowShuffle = true;
+			var trackid = allowShuffle && this.shuffle ? this.random_trackid() : this.previous_trackid;
+			return this.playTrack(trackid);
 		},
 
-		nextTrack() {
-			return this.playTrack(this.next_trackid);
+		nextTrack(allowShuffle) {
+			if (typeof(allowShuffle) == "undefined") allowShuffle = true;
+			var trackid = allowShuffle && this.shuffle ? this.random_trackid() : this.next_trackid;
+			return this.playTrack(trackid);
 		},
 
 		pauseTrack() {
